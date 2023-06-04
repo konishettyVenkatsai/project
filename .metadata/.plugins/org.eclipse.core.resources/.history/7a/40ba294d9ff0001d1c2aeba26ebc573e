@@ -1,0 +1,39 @@
+package sis;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class basics {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		// invoking the browser
+				// chrome - chrome driver -> methods
+				// firefox -gecko driver -> methods
+				
+				//chromedriver.exe -> chrome browser
+				System.setProperty("webdriver.chrome.driver", "F:\\Eclipse\\drivers\\chromedriver_win32\\chromedriver.exe");
+		      WebDriver driver= new ChromeDriver();
+		      driver.get("https://smax-staging.smax5.com/dpc/#/authentication/signin");
+		      driver.navigate().refresh();
+		      Thread.sleep(5000);
+		      String s=driver.getTitle();
+		      System.out.println(s);
+		      String url =driver.getCurrentUrl();
+		      System.out.println(url);
+		     // driver.findElement(By.id("mat-input-0")).sendKeys("kadheer");  
+		      driver.findElement(By.cssSelector("input[id='mat-input-0']")).sendKeys("kadheer");
+		      Thread.sleep(5000);
+		      driver.findElement(By.id("mat-input-1")).sendKeys("Missis");
+		      Thread.sleep(5000);
+		      driver.findElement(By.xpath("//Button[@type='submit']")).click();
+		      Thread.sleep(5000);
+		      driver.navigate().back();
+		      Thread.sleep(5000);
+		      driver.navigate().forward();
+		      //Thread.sleep(10000);
+		      driver.close();
+	}
+
+}

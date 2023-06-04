@@ -1,0 +1,20 @@
+package sis;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class basics {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// invoking the browser
+				// chrome - chrome driver -> methods
+				// firefox -gecko driver -> methods
+				
+				//chromedriver.exe -> chrome browser
+				System.setProperty("webdriver.chrome.driver", "F:\\Eclipse\\drivers\\chromedriver_win32\\chromedriver.exe");
+		      WebDriver driver= new ChromeDriver();
+		      driver.get("https://www.amazon.in/?tag=msndeskabkin-21&ref=pd_sl_5szpgfto9j_e&adgrpid=1320515071595367&hvadid=82532458765178&hvnetw=o&hvqmt=e&hvbmt=be&hvdev=c&hvlocint=&hvlocphy=158516&hvtargid=kwd-82533067351416:loc-90&hydadcr=14452_2334185");
+	}
+
+}

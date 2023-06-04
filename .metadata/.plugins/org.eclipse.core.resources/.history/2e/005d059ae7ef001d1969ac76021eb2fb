@@ -1,0 +1,14 @@
+
+public class seleniumIntroduction {
+
+	public static void main(String[] args) {
+		// invoking the browser
+		// chrome - chrome driver -> methods
+		// firefox -gecko driver -> methods
+		
+		//chromedriver.exe -> chrome browser
+		System.setProperty("webdriver.chrome.driver", "F:\\Eclipse\\drivers\\chromedriver_win32\\chromedriver.exe");
+
+	}
+
+}
